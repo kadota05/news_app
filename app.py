@@ -12,13 +12,13 @@ def home():
     soup = BeautifulSoup(response.text, 'html.parser')
 
     article_links = []
-    for a in soup.find_all('a', href=True):
+    for a in soup.select('a'):
         if 'articles' in a['href']:
-            article_links.append(a['href'])
+            article_links.append(a)
 
     random_article_link = random.choice(article_links)
 
-    return render_template('home.html', link=random_article_link)
+    return render_template('home.html', link_text=random_article_link.p.text, link_url=random_article_link['href'])
 
 if __name__ == "__main__":
     app.run(debug=True)
