@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- レスポンシブデザインのためのメタタグ -->
+
     <style>
         body {
-            font-family: 'Noto Serif JP', serif; /* Noto Serifは和風の雰囲気に合うフォントです */
-            background-color: #fdf6e3; /* アイボリーのような背景色 */
-            color: #4b3832; /* 濃い茶色の文字色 */
+            font-family: 'Noto Serif JP', serif;
+            background-color: #fdf6e3;
+            color: #4b3832;
             text-align: center;
-            padding: 40px 0;
+            padding: 20px;
         }
 
         h1 {
-            border-bottom: 2px solid #4b3832; /* 下線を追加 */
+            border-bottom: 2px solid #4b3832;
             padding-bottom: 10px;
             margin-bottom: 20px;
+            font-size: 24px; /* スマホ表示に合わせてサイズを調整 */
         }
 
         div {
-            background-color: #f2e8df; /* ライトブラウンの背景色 */
-            padding: 20px;
-            border-radius: 8px; /* 角を丸く */
+            background-color: #f2e8df;
+            padding: 15px;
+            border-radius: 8px;
             display: inline-block;
             margin-bottom: 20px;
+            max-width: 100%; /* スマホ表示での幅を最大100%にする */
         }
 
         a {
-            color: #854442; /* 和風の赤色 */
+            color: #854442;
             text-decoration: none;
+            word-wrap: break-word; /* URLが長すぎる場合に改行させる */
         }
 
         a:hover {
@@ -35,33 +41,4 @@
         }
 
         button {
-            background-color: #854442; /* 和風の赤色 */
-            color: white; /* ボタンの文字色 */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #6b3436; /* ホバー時の色 */
-        }
-    </style>
-</head>
-
-<body>
-
-    <h1>ニュースガチャ</h1>
-
-    <div>
-        <p>{{ link_text }}</p>
-        <p><a href="{{ link_url }}" target="_blank">{{ link_url }}</a></p>
-    </div>
-
-    <form action="/" method="get">
-        <button type="submit">再検索</button>
-    </form>
-
-</body>
-
-</html>
+            background-color
